@@ -1,0 +1,32 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">
+          Commit Overview for Repo: {{ namespace }}/{{ repo }}
+        </h5>
+        <div *ngFor="let commit of commits">
+          <div class="row mt-1">
+            <div class="col-2">
+              <small
+                ><mark>{{ commit.commit.author.date }}</mark></small
+              >
+            </div>
+            <div class="col-8">
+              <a
+                class="message-wrap"
+                routerLink="{{ getEncodedUrl(commit) }}"
+                >{{ commit.commit.message }}</a
+              >
+            </div>
+            <div class="col-2">
+              <span class="badge rounded-pill bg-primary p-2"
+                >{{ commit.commit.author.name }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

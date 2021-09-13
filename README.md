@@ -1,6 +1,16 @@
-# Githubdata
+# Github Data
+Allows user to provide a repo url and date range to show commit details from:
+
+![Repo and range selector](./repo-selector.png "landing page")
+
+![List of commits](./overview.png "commits")
+
+![Commit Details](./details.png "details")
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
+
+# npm i
 
 ## Development server
 

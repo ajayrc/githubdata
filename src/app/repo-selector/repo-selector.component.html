@@ -1,0 +1,81 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            Provide url of a github repo and date range:
+          </h5>
+          <div class="row">
+            <div class="col">
+              <input
+                type="text"
+                ngxDaterangepickerMd
+                [(ngModel)]="selected"
+                class="form-control"
+                placeholder="Select date range"
+              />
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Owner"
+                aria-label="Owner"
+                #owner
+              />
+              <span class="input-group-text">@</span>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Repo"
+                aria-label="Repo"
+                #repo
+              />
+            </div>
+          </div>
+          <div class="row justify-content-end">
+            <div class="col-8"></div>
+            <div class="col-4">
+              <button
+                type="button"
+                class="btn btn-primary w-100"
+                (click)="goToRepo(owner.value, repo.value)"
+              >
+                Go
+              </button>
+            </div>
+          </div>
+          <div class="card-header mt-4">Featured</div>
+          <div class="list-group">
+            <a
+              href="#"
+              class="list-group-item list-group-item-action"
+              (click)="!!goToRepo('angular', 'angular')"
+            >
+              Angular Core</a
+            >
+            <a
+              href="#"
+              class="list-group-item list-group-item-action"
+              (click)="!!goToRepo('facebook', 'react')"
+            >
+              React Js</a
+            >
+            <a
+              href="#"
+              class="list-group-item list-group-item-action"
+              (click)="!!goToRepo('microsoft', 'vscode')"
+            >
+              VS Code</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3"></div>
+  </div>
+</div>

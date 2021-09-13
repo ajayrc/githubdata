@@ -1,0 +1,27 @@
+<div class="container mt-3">
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5>
+        <span class="badge bg-secondary">#{{ commitDetails.sha }}</span>
+      </h5>
+      <p class="lead text-primary">
+        {{ commitDetails.commit.message }}
+      </p>
+      <div *ngFor="let file of commitDetails?.files">
+        <div class="row mt-3">
+          <div class="col">
+            <small class="text-muted">{{ file.filename }}</small>
+            <small class="badge bg-primary ms-2">{{ file.status }}</small>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <small class="text-success">+{{ file.additions }}</small>
+            <small class="text-danger ms-2">-{{ file.deletions }}</small>
+            <small class="text-warning ms-2">^{{ file.changes }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
