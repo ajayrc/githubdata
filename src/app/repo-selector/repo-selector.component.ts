@@ -4,8 +4,7 @@ import * as dayjs from 'dayjs';
 
 @Component({
   selector: 'app-repo-selector',
-  templateUrl: './repo-selector.component.html',
-  styleUrls: ['./repo-selector.component.css']
+  templateUrl: './repo-selector.component.html'
 })
 export class RepoSelectorComponent implements OnInit {
 

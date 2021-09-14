@@ -8,12 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RepoSelectorComponent } from './repo-selector/repo-selector.component';
+import { NavmenuComponent } from './navmenu/navmenu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    RepoSelectorComponent
+    RepoSelectorComponent,
+    NavmenuComponent
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,7 @@
                 [(ngModel)]="selected"
                 class="form-control"
                 placeholder="Select date range"
+                id="date_range"
               />
             </div>
           </div>
@@ -26,6 +27,7 @@
                 placeholder="Owner"
                 aria-label="Owner"
                 #owner
+                id="repo_owner"
               />
               <span class="input-group-text">@</span>
               <input
@@ -34,6 +36,7 @@
                 placeholder="Repo"
                 aria-label="Repo"
                 #repo
+                id="repo_name"
               />
             </div>
           </div>
@@ -44,6 +47,7 @@
                 type="button"
                 class="btn btn-primary w-100"
                 (click)="goToRepo(owner.value, repo.value)"
+                id="go_btn"
               >
                 Go
               </button>
