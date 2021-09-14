@@ -10,33 +10,33 @@
           <div class="row">
             <div class="col">
               <input
+                id="date_range"
                 type="text"
                 ngxDaterangepickerMd
                 [(ngModel)]="selected"
                 class="form-control"
                 placeholder="Select date range"
-                id="date_range"
               />
             </div>
           </div>
           <div class="row mt-2">
             <div class="input-group mb-3">
               <input
+                id="repo_owner"
                 type="text"
                 class="form-control"
                 placeholder="Owner"
                 aria-label="Owner"
                 #owner
-                id="repo_owner"
               />
               <span class="input-group-text">@</span>
               <input
+                id="repo_name"
                 type="text"
                 class="form-control"
                 placeholder="Repo"
                 aria-label="Repo"
                 #repo
-                id="repo_name"
               />
             </div>
           </div>
@@ -44,10 +44,10 @@
             <div class="col-8"></div>
             <div class="col-4">
               <button
+                id="go_btn"
                 type="button"
                 class="btn btn-primary w-100"
                 (click)="goToRepo(owner.value, repo.value)"
-                id="go_btn"
               >
                 Go
               </button>
@@ -56,6 +56,7 @@
           <div class="card-header mt-4">Featured</div>
           <div class="list-group">
             <a
+              id="angular"
               href="#"
               class="list-group-item list-group-item-action"
               (click)="!!goToRepo('angular', 'angular')"
@@ -63,6 +64,7 @@
               Angular Core</a
             >
             <a
+              id="reactjs"
               href="#"
               class="list-group-item list-group-item-action"
               (click)="!!goToRepo('facebook', 'react')"
@@ -70,6 +72,7 @@
               React Js</a
             >
             <a
+              id="vscode"
               href="#"
               class="list-group-item list-group-item-action"
               (click)="!!goToRepo('microsoft', 'vscode')"

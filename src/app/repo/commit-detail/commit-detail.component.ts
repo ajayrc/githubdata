@@ -6,8 +6,7 @@ import { CommitDetailService } from './service/commit-detail.service';
 
 @Component({
   selector: 'app-commit-detail',
-  templateUrl: './commit-detail.component.html',
-  styleUrls: ['./commit-detail.component.css']
+  templateUrl: './commit-detail.component.html'
 })
 export class CommitDetailComponent implements OnInit {
 

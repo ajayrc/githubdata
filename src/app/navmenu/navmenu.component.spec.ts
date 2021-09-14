@@ -22,4 +22,10 @@ describe('NavmenuComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should show repo heading', () => {
+    const componentNativeElement: HTMLElement = fixture.nativeElement;
+    expect(componentNativeElement.textContent).toContain('Repo Details');
+  });
+
 });

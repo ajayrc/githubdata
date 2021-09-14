@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'navmenu',
-  templateUrl: './navmenu.component.html',
-  styleUrls: ['./navmenu.component.scss']
+  templateUrl: './navmenu.component.html'
 })
 export class NavmenuComponent implements OnInit {
 
