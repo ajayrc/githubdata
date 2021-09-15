@@ -5,17 +5,13 @@ import { catchError } from 'rxjs/operators';
 import { CommitDetails } from 'src/app/model/commit-details';
 import { handleServerError } from 'src/app/service-utils/error-handler';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CommitDetailService {
-
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   getCommitDetails(url: string): Observable<CommitDetails> {
-    return this.http.get<CommitDetails>(url)
+    return this.http
+      .get<CommitDetails>(url)
       .pipe(catchError(handleServerError));
   }
-
 }
