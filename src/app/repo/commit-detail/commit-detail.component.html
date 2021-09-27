@@ -2,12 +2,12 @@
   <div class="card mb-3">
     <div class="card-body">
       <h5>
-        <span class="badge bg-secondary">#{{ commitDetails.sha }}</span>
+        <span class="badge bg-secondary">#{{ commitDetails?.sha }}</span>
       </h5>
       <p class="lead text-primary">
-        {{ commitDetails.commit.message }}
+        {{ commitDetails?.commit?.message }}
       </p>
-      <div *ngFor="let file of commitDetails.files">
+      <div *ngFor="let file of commitDetails?.files">
         <div class="row mt-3">
           <div class="col">
             <small class="text-muted">{{ file.filename }}</small>
